@@ -1,10 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Controllers",
     "\\Models",
-    "\\Properties",
-    "\\Views"
+    "\\Views",
+    "\\Views\\GamesView"
   ],
-  "SelectedNode": "\\appsettings.Development.json",
   "PreviewInSolutionExplorer": false
 }
