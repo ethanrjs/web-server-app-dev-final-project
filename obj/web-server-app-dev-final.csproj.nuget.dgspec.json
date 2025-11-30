@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ethan\\projects\\web-server-app-dev-final\\web-server-app-dev-final.csproj": {}
+    "/Users/ethanrettinger/projects/final-project/web-server-app-dev-final-project/web-server-app-dev-final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ethan\\projects\\web-server-app-dev-final\\web-server-app-dev-final.csproj": {
+    "/Users/ethanrettinger/projects/final-project/web-server-app-dev-final-project/web-server-app-dev-final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ethan\\projects\\web-server-app-dev-final\\web-server-app-dev-final.csproj",
+        "projectUniqueName": "/Users/ethanrettinger/projects/final-project/web-server-app-dev-final-project/web-server-app-dev-final.csproj",
         "projectName": "web-server-app-dev-final",
-        "projectPath": "C:\\Users\\ethan\\projects\\web-server-app-dev-final\\web-server-app-dev-final.csproj",
-        "packagesPath": "C:\\Users\\ethan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ethan\\projects\\web-server-app-dev-final\\obj\\",
+        "projectPath": "/Users/ethanrettinger/projects/final-project/web-server-app-dev-final-project/web-server-app-dev-final.csproj",
+        "packagesPath": "/Users/ethanrettinger/.nuget/packages/",
+        "outputPath": "/Users/ethanrettinger/projects/final-project/web-server-app-dev-final-project/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ethan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/ethanrettinger/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,12 +37,29 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -69,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
