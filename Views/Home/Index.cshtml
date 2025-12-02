@@ -1,8 +1,156 @@
+@model List<web_server_app_dev_final.Models.Game>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Game Library";
+    var featuredGame = ViewBag.FeaturedGame as web_server_app_dev_final.Models.Game;
+    var totalGames = ViewBag.TotalGames as int? ?? 0;
+    var totalHours = ViewBag.TotalHours as string ?? "0";
+    var reviewerCount = ViewBag.ReviewerCount as int? ?? 0;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<!-- hero section featuring the featured game/review -->
+@if (featuredGame != null)
+{
+<section class="hero" aria-labelledby="featured-title">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-main">
+                <div>
+                    <span class="hero-badge" aria-label="Featured review">Featured Review</span>
+                    <h1 id="featured-title" class="hero-title">@featuredGame.Title</h1>
+                    <div class="hero-meta">
+                        <span>@featuredGame.Developer</span>
+                        <span class="hero-meta-divider" aria-hidden="true"></span>
+                        <span>@featuredGame.ReleaseYear</span>
+                        <span class="hero-meta-divider" aria-hidden="true"></span>
+                        <span>@featuredGame.GetGenreList().FirstOrDefault()</span>
+                    </div>
+                    <p class="hero-description">
+                        @(featuredGame.Description ?? featuredGame.ReviewText)
+                    </p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value accent-amber" aria-label="Score: @featuredGame.Rating.ToString("0.0") out of 10">@featuredGame.Rating.ToString("0.0")</span>
+                        <span class="stat-label">Our Score</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value accent-green">80+</span>
+                        <span class="stat-label">Hours Played</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">@featuredGame.Reviewer</span>
+                        <span class="stat-label">Reviewed By</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-sidebar">
+                <div class="hero-image" style="background-image: url('@featuredGame.CoverImageUrl');" role="img" aria-label="@featuredGame.Title cover art"></div>
+                <div class="hero-actions">
+                    <a asp-controller="Games" asp-action="Details" asp-route-id="@featuredGame.Id" class="btn btn-full">Read Review</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}
+
+<!-- team bar area showing the reviewers for easy access to their profiles -->
+<nav class="team-bar" aria-label="Reviewers">
+    <div class="container">
+        <div class="team-bar-inner">
+            <span class="team-label">Reviewed by</span>
+            <div class="team-members">
+                <a asp-action="EthanR" class="team-member">
+                    <span class="team-avatar" aria-hidden="true">ER</span>
+                    <span class="team-name">Ethan R</span>
+                </a>
+                <a asp-action="EllaS" class="team-member">
+                    <span class="team-avatar" aria-hidden="true">ES</span>
+                    <span class="team-name">Ella S</span>
+                </a>
+                <a asp-action="EthanG" class="team-member">
+                    <span class="team-avatar" aria-hidden="true">EG</span>
+                    <span class="team-name">Ethan G</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- GAMES GRID -->
+<section class="games-section" aria-labelledby="recent-reviews-title">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="recent-reviews-title" class="section-title">Recent Reviews</h2>
+            <a asp-controller="Games" asp-action="Index" class="section-count">View All @totalGames Games</a>
+        </div>
+
+        <div class="games-grid" role="list">
+            @foreach (var game in Model.Where(g => !g.IsFeatured).Take(8))
+            {
+            <a asp-controller="Games" asp-action="Details" asp-route-id="@game.Id" class="game-card" role="listitem" aria-label="@game.Title - Rating: @game.Rating.ToString("0.0")">
+                <div class="game-cover">
+                    <img src="@game.CoverImageUrl" alt="@game.Title cover art" loading="lazy">
+                    <span class="game-rating @game.GetRatingClass()" aria-label="Rating: @game.Rating.ToString("0.0")">
+                        @game.Rating.ToString("0.0")
+                    </span>
+                    <div class="game-platform" aria-label="Platforms">
+                        @foreach (var platform in game.GetPlatformList())
+                        {
+                        <span class="platform-tag">@platform</span>
+                        }
+                    </div>
+                </div>
+                <div class="game-info">
+                    <div class="game-header">
+                        <h3 class="game-title">@game.Title</h3>
+                        <span class="game-developer">@game.Developer</span>
+                    </div>
+                    <div class="game-genres" aria-label="Genres">
+                        @foreach (var genre in game.GetGenreList())
+                        {
+                        <span class="genre-tag">@genre</span>
+                        }
+                    </div>
+                    <div class="game-review">
+                        <p class="review-text">@game.ReviewText</p>
+                        <div class="review-meta">
+                            <span class="reviewer">
+                                <span class="reviewer-dot" aria-hidden="true"></span>
+                                @game.Reviewer
+                            </span>
+                            <span class="review-date">
+                                <time datetime="@game.ReviewDate?.ToString("yyyy-MM")">@game.GetFormattedReviewDate()</time>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            }
+        </div>
+    </div>
+</section>
+
+<!-- STATS SECTION -->
+<section class="stats-section" aria-label="Site statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stats-item">
+                <span class="stats-number">@totalGames</span>
+                <span class="stats-label">Games Reviewed</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number">@totalHours</span>
+                <span class="stats-label">Hours Played</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number">@reviewerCount</span>
+                <span class="stats-label">Reviewers</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-number">2023</span>
+                <span class="stats-label">Since</span>
+            </div>
+        </div>
+    </div>
+</section>

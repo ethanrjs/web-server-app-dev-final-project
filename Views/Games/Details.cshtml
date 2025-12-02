@@ -1,0 +1,114 @@
+@model web_server_app_dev_final.Models.Game
+@{
+    ViewData["Title"] = Model.Title + " - Review";
+}
+
+<article class="game-detail" aria-labelledby="game-title">
+    <!-- hero section with game details -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-main">
+                    <div>
+                        <h1 id="game-title" class="hero-title">@Model.Title</h1>
+                        <div class="hero-meta">
+                            <span>@Model.Developer</span>
+                            <span class="hero-meta-divider" aria-hidden="true"></span>
+                            <span>@Model.ReleaseYear</span>
+                        </div>
+                        <div class="detail-tags">
+                            @foreach (var genre in Model.GetGenreList())
+                            {
+                            <span class="genre-tag">@genre</span>
+                            }
+                            @foreach (var platform in Model.GetPlatformList())
+                            {
+                            <span class="platform-tag">@platform</span>
+                            }
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-value @(Model.Rating >= 9 ? "accent-green" : Model.Rating >= 7 ? "accent-amber" : "")" aria-label="Score: @Model.Rating.ToString("0.0") out of 10">@Model.Rating.ToString("0.0")</span>
+                            <span class="stat-label">Our Score</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">@Model.Reviewer</span>
+                            <span class="stat-label">Reviewed By</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">
+                                <time datetime="@Model.ReviewDate?.ToString("yyyy-MM-dd")">@Model.GetFormattedReviewDate()</time>
+                            </span>
+                            <span class="stat-label">Review Date</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-sidebar">
+                    <div class="hero-image" style="background-image: url('@Model.CoverImageUrl');" role="img" aria-label="@Model.Title cover art"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- review content -->
+    <section class="page-section" aria-labelledby="review-title">
+        <div class="container">
+            <div class="content-card">
+                <h2 id="review-title" class="content-card-title">Review</h2>
+                <p class="review-full-text">@Model.ReviewText</p>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.Description))
+            {
+            <div class="content-card">
+                <h2 class="content-card-title">About the Game</h2>
+                <p>@Model.Description</p>
+            </div>
+            }
+
+            <div class="content-card">
+                <h2 class="content-card-title">Game Information</h2>
+                <dl class="game-info-list">
+                    <div class="info-row">
+                        <dt>Title</dt>
+                        <dd>@Model.Title</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Developer</dt>
+                        <dd>@Model.Developer</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Release Year</dt>
+                        <dd>@Model.ReleaseYear</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Platforms</dt>
+                        <dd>@Model.Platforms</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Genres</dt>
+                        <dd>@Model.Genres</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Rating</dt>
+                        <dd><strong class="@Model.GetRatingClass()">@Model.Rating.ToString("0.0")</strong> / 10</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Reviewed By</dt>
+                        <dd>@Model.Reviewer</dd>
+                    </div>
+                    <div class="info-row">
+                        <dt>Review Date</dt>
+                        <dd><time datetime="@Model.ReviewDate?.ToString("yyyy-MM-dd")">@Model.ReviewDate?.ToString("MMMM d, yyyy")</time></dd>
+                    </div>
+                </dl>
+            </div>
+
+            <nav class="detail-nav" aria-label="Page navigation">
+                <a asp-action="Index" class="btn btn-secondary">Back to All Games</a>
+                <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Back to Home</a>
+            </nav>
+        </div>
+    </section>
+</article>

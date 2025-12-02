@@ -1,0 +1,76 @@
+@model List<web_server_app_dev_final.Models.Game>
+@{
+    ViewData["Title"] = "All Games";
+}
+
+<!-- okay so for each game there are required details:
+- cover image
+- title
+- developer
+- year
+- genres
+- platforms
+- rating
+- reviewer
+- actions
+
+actions is the view details button pretty much
+-->
+<section class="games-table-section" aria-labelledby="games-title">
+    <div class="container">
+        <div class="page-header">
+            <h1 id="games-title" class="page-title">Game Database</h1>
+            <p class="page-subtitle">@Model.Count games reviewed</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table class="games-table" aria-label="List of reviewed games">
+                <thead>
+                    <tr>
+                        <th scope="col">Cover</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Developer</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Genres</th>
+                        <th scope="col">Platforms</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Reviewer</th>
+                        <th scope="col"><span class="sr-only">Actions</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var game in Model)
+                    {
+                    <tr>
+                        <td>
+                            <img src="@game.CoverImageUrl" alt="" aria-hidden="true">
+                        </td>
+                        <td><strong>@game.Title</strong></td>
+                        <td>@game.Developer</td>
+                        <td>@game.ReleaseYear</td>
+                        <td>
+                            @foreach (var genre in game.GetGenreList())
+                            {
+                            <span class="genre-tag">@genre</span>
+                            }
+                        </td>
+                        <td>
+                            @foreach (var platform in game.GetPlatformList())
+                            {
+                            <span class="platform-tag">@platform</span>
+                            }
+                        </td>
+                        <td>
+                            <span class="table-rating @game.GetRatingClass()">@game.Rating.ToString("0.0")</span>
+                        </td>
+                        <td>@game.Reviewer</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@game.Id" class="table-btn" aria-label="View details for @game.Title">View</a>
+                        </td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
