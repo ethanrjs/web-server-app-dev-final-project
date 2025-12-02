@@ -3,47 +3,60 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - web_server_app_dev_final</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <meta name="description" content="WSAD Final Project - A game review library" />
+    <title>@ViewData["Title"] - WSAD Final / Game Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/web_server_app_dev_final.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">web_server_app_dev_final</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
+    <!-- skip to main content link for keyboard users
+    common practice in accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <footer class="border-top footer text-muted">
+    <!-- header for the website, contains the logo and navigation and whatnot-->
+    <header class="header" role="banner">
         <div class="container">
-            &copy; 2025 - web_server_app_dev_final - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="header-inner">
+                <a asp-controller="Home" asp-action="Index" class="logo" aria-label="WSAD Final - Home">
+                    <span class="logo-icon" aria-hidden="true">W</span>
+                    <span class="logo-text">
+                        <span class="logo-main">WSAD</span>
+                        <span class="logo-sub">Final</span>
+                    </span>
+                </a>
+
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <a asp-controller="Home" asp-action="Index" class="nav-link">Library</a>
+                    <a asp-controller="Games" asp-action="Index" class="nav-link">Games</a>
+                    <a asp-controller="Home" asp-action="About" class="nav-link">About</a>
+                    <a asp-controller="Home" asp-action="Collections" class="nav-link">Collections</a>
+                    <a asp-controller="Home" asp-action="Team" class="nav-link">Team</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content of the website, bread and butter goes here -->
+    <main id="main-content" role="main">
+        @RenderBody()
+    </main>
+
+    <!-- footer containing the "copyright" (lol) and team members -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <span class="footer-copy">WSAD Final Project</span>
+                <nav class="footer-links" aria-label="Team members">
+                    <a asp-controller="Home" asp-action="EthanR" class="footer-link">Ethan R</a>
+                    <a asp-controller="Home" asp-action="EllaS" class="footer-link">Ella S</a>
+                    <a asp-controller="Home" asp-action="EthanG" class="footer-link">Ethan G</a>
+                </nav>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
