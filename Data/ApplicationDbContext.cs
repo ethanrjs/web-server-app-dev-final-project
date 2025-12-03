@@ -88,7 +88,22 @@ public class ApplicationDbContext : DbContext
                 Reviewer = "Ethan R",
                 ReviewDate = new DateTime(2025, 12, 2),
                 IsFeatured = false
-            }
+            },
+                        new Game
+                        {
+                            Id = 5,
+                            Title = "The Isle",
+                            Developer = "Afterthought LLC",
+                            ReleaseYear = 2015,
+                            Platforms = "PC",
+                            Genres = "Simulation,Survival,Horror",
+                            Rating = 10.0m,
+                            CoverImageUrl = "https://tse1.mm.bing.net/th/id/OIP.4D_3COBMYkVMCYYWQ7KCLwHaLH?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
+                            ReviewText = "Withstand what the island throws at you, no matter the cost.",
+                            Reviewer = "Ella S",
+                            ReviewDate = new DateTime(2025, 12, 3),
+                            IsFeatured = false
+                        }
         );
     }
 }
