@@ -1,13 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Data",
-    "\\Migrations",
-    "\\Models",
-    "\\Views",
-    "\\Views\\Games",
-    "\\Views\\Home"
+    ""
   ],
-  "SelectedNode": "\\Data\\ApplicationDbContext.cs",
+  "SelectedNode": "\\C:\\Users\\ellac\\Source\\Repos\\web-server-app-dev-final-project",
   "PreviewInSolutionExplorer": false
 }

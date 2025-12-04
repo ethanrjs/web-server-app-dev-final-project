@@ -103,7 +103,54 @@ public class ApplicationDbContext : DbContext
                             Reviewer = "Ella S",
                             ReviewDate = new DateTime(2025, 12, 3),
                             IsFeatured = false
-                        }
+                        },
+                   new Game
+                   {
+                       Id = 6,
+                       Title = "Red Dead Redemption 2",
+                       Developer = "Rockstar Games",
+                       ReleaseYear = 2018,
+                       Platforms = "PC",
+                       Genres = "Open World,Shooter,RPG",
+                       Rating = 10.0m,
+                       CoverImageUrl = "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg",
+                       ReviewText = "I have a plan.",
+                       Reviewer = "Ella S",
+                       ReviewDate = new DateTime(2025, 12, 3),
+                       IsFeatured = false
+                   },
+            new Game
+            {
+                Id = 7,
+                Title = "Friday Night Funkin'",
+                Developer = "Funkin' Crew",
+                ReleaseYear = 2019,
+                Platforms = "PC",
+                Genres = "Rhythm,Music",
+                Rating = 10.0m,
+                CoverImageUrl = "https://i1.sndcdn.com/artworks-EioFkgzPYZ8dFdQc-g71gJA-t1080x1080.jpg",
+                ReviewText = "Rhythm game perfection.",
+                Reviewer = "Ella S",
+                ReviewDate = new DateTime(2025, 12, 3),
+                IsFeatured = false
+            },
+        new Game
+        {
+            Id = 8,
+            Title = "Five Nights At Freddy's (Series)",
+            Developer = "Scott Cawthon",
+            ReleaseYear = 2014,
+            Platforms = "PC,Moblie,Console",
+            Genres = "Horror",
+            Rating = 10.0m,
+            CoverImageUrl = "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/443ce950-f8e1-4188-b51b-720aba16a967/ddqggjm-b7fdd5f9-f4bb-4cc3-bddd-e7b3071245bf.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ0M2NlOTUwLWY4ZTEtNDE4OC1iNTFiLTcyMGFiYTE2YTk2N1wvZGRxZ2dqbS1iN2ZkZDVmOS1mNGJiLTRjYzMtYmRkZC1lN2IzMDcxMjQ1YmYuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.LRlnnP2xMXcYpAJ1jrWncoEkNpUAZGMHTd5WySPQ4wI",
+            ReviewText = "Single handedly the best horror franchise out there.",
+            Reviewer = "Ella S",
+            ReviewDate = new DateTime(2025, 12, 3),
+            IsFeatured = false
+        }
+
+
         );
     }
 }

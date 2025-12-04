@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EllaS.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\EllaS.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanR.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\EthanR.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\web-server-app-dev-final.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:web-server-app-dev-final.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -35,16 +43,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\Collections.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EllaS.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\EllaS.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanG.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\EthanG.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanR.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Views\\Home\\EthanR.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\Index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -66,8 +66,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 12,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
@@ -89,29 +93,8 @@
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "20251202180834_InitialCreate.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Migrations\\20251202180834_InitialCreate.Designer.cs",
-              "RelativeDocumentMoniker": "Migrations\\20251202180834_InitialCreate.Designer.cs",
-              "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Migrations\\20251202180834_InitialCreate.Designer.cs",
-              "RelativeToolTip": "Migrations\\20251202180834_InitialCreate.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T22:03:27.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "web-server-app-dev-final.csproj",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\web-server-app-dev-final.csproj",
               "RelativeDocumentMoniker": "web-server-app-dev-final.csproj",
@@ -119,12 +102,11 @@
               "RelativeToolTip": "web-server-app-dev-final.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-12-03T21:51:58.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T21:51:58.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -136,20 +118,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAAAGwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAgwGwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T00:04:39.537Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T00:04:39.537Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Platform.cs",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Models\\Platform.cs",
               "RelativeDocumentMoniker": "Models\\Platform.cs",
@@ -161,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Models\\Game.cs",
               "RelativeDocumentMoniker": "Models\\Game.cs",
@@ -173,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Collections.cshtml",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\Collections.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Collections.cshtml",
@@ -185,31 +166,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "EllaS.cshtml",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EllaS.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\EllaS.cshtml",
               "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EllaS.cshtml",
               "RelativeToolTip": "Views\\Home\\EllaS.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T00:04:14.463Z"
+              "WhenOpened": "2025-12-03T00:04:14.463Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "EthanG.cshtml",
-              "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanG.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\EthanG.cshtml",
-              "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanG.cshtml",
-              "RelativeToolTip": "Views\\Home\\EthanG.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T00:03:59.645Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 1,
               "Title": "EthanR.cshtml",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanR.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\EthanR.cshtml",
@@ -218,6 +188,30 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-03T00:03:52.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "20251202180834_InitialCreate.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Migrations\\20251202180834_InitialCreate.Designer.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251202180834_InitialCreate.Designer.cs",
+              "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Migrations\\20251202180834_InitialCreate.Designer.cs",
+              "RelativeToolTip": "Migrations\\20251202180834_InitialCreate.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T22:03:27.575Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EthanG.cshtml",
+              "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanG.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EthanG.cshtml",
+              "ToolTip": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\EthanG.cshtml",
+              "RelativeToolTip": "Views\\Home\\EthanG.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T00:03:59.645Z"
             },
             {
               "$type": "Document",
@@ -245,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "About.cshtml",
               "DocumentMoniker": "C:\\Users\\ellac\\source\\repos\\web-server-app-dev-final-project\\Views\\Home\\About.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\About.cshtml",
