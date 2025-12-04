@@ -40,7 +40,7 @@ public class Game
     /// <summary>
     /// URL to the game's cover image
     /// </summary>
-    [StringLength(500)]
+    [StringLength(2048)]
     public string CoverImageUrl { get; set; } = string.Empty;
 
     /// <summary>
