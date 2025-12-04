@@ -13,7 +13,7 @@ RUN dotnet restore
 # Copy everything else and build
 # This copies files such as the actual source code, db context, models, etc.
 COPY . .    
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish "web-server-app-dev-final.csproj" -c Release -o /app/publish
 
 # Runtime stage --> This is the stage where the application is run
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
