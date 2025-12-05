@@ -148,9 +148,69 @@ public class ApplicationDbContext : DbContext
             Reviewer = "Ella S",
             ReviewDate = new DateTime(2025, 12, 3),
             IsFeatured = false
+        },
+
+        new Game
+        {
+            Id = 9,
+            Title = "Pokemon Black Version",
+            Developer = "Game Freak",
+            ReleaseYear = 2010,
+            Platforms = "DS",
+            Genres = "RPG",
+            Rating = 10.0m,
+            CoverImageUrl = "https://archives.bulbagarden.net/media/upload/d/dc/Black_EN_boxart.png",
+            ReviewText = "Game Freak's pinnacle of Pokemon- the franchise's best!",
+            Reviewer = "Ethan G",
+            ReviewDate = new DateTime(2025, 12, 5),
+        },
+
+        new Game
+        {
+            Id = 10,
+            Title = "Utopia",
+            Developer = "Mattel Electronics",
+            ReleaseYear = 1982,
+            Platforms = "Intellivision",
+            Genres = "Strategy",
+            Rating = 8.0m,
+            CoverImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/dc/Utopia_%28video_game%29_boxart.jpg",
+            ReviewText = "Civilization's great-granddaddy. Primitive, but highly interesting multiplayer strategty title.",
+            Reviewer = "Ethan G",
+            ReviewDate = new DateTime(2025, 12, 5),
+
+        },
+
+        new Game()
+        {
+            Id = 11,
+            Title = "Worms WMD",
+            ReleaseYear = 2016,
+            Platforms = "PC, Switch, XBOX, PS4, IOS, Android",
+            Genres = "Strategy, Party, Physics",
+            Rating = 6.0m,
+            CoverImageUrl = "https://upload.wikimedia.org/wikipedia/en/e/e6/Worms_WMD_cover_art.jpg",
+            ReviewText = "Worms is fun, so this game is reasonably fun. Unfortunately, other Worms games are just better. Play Reloaded instead.",
+            Reviewer = "Ethan G",
+            ReviewDate = new DateTime(2025, 12, 5),
+        },
+
+        new Game()
+        { 
+            Id = 12,
+            Title = "Civilization 7",
+            Developer = "Firaxis Games",
+            ReleaseYear = 2025,
+            Platforms = "Cross-Platform",
+            Genres = "Strategy",
+            Rating = 6.0m,
+            CoverImageUrl = "https://upload.wikimedia.org/wikipedia/en/d/d5/Civilization_VII_cover.png",
+            ReviewText = "What if we took Civilization and made your game partially reset twice per campaign? Terrible idea for a sequel.",
+            Reviewer = "Ethan G",
+            ReviewDate= new DateTime(2025, 12, 5),
         }
-
-
         );
+
+        
     }
 }
